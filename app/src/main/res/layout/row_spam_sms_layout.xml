@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.rajkumar.smsreader.database.SpamMessageData" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtFrom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{model.address}"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            tools:text="rajkdldlldl;;ld" />
+
+        <TextView
+            android:id="@+id/txtMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@{model.message}"
+            android:textColor="#808080"
+            android:textSize="16sp"
+            tools:text="ckscksjckjc" />
+
+        <TextView
+            android:textColor="#808080"
+            time="@{model.timeStamp}"
+            android:gravity="end"
+            android:layout_marginBottom="16dp"
+            android:layout_width="wrap_content"
+            android:layout_gravity="end"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</layout>
